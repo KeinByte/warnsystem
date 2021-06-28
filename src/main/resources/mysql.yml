@@ -1,0 +1,7 @@
+MySQL:
+  Connection: 'WarnSystem'
+  Host: 'localhost'
+  Port: 3306
+  Database: 'warn_system'
+  User: 'root'
+  Password: '12345678'
