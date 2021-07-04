@@ -1,0 +1,9 @@
+name: WarnSystem
+version: 1.0
+author: KeinByte
+main: net.minesucht.warn.WarnSystem
+
+commands:
+  warn:
+  warnlog:
+  wadmin:
