@@ -33,7 +33,7 @@ public class DatabaseManager {
                 .setAddress(new InetSocketAddress("localhost", 3306))
                 .setDataSourceClassName(HikariDataSource.class.getName())
                 .setUsername("root")
-                .setPassword("09277f48e6bd")
+                .setPassword("xyz")
                 .build());
         databaseDriver.connect();
         database = databaseDriver.getDatabase("WarnSystem");

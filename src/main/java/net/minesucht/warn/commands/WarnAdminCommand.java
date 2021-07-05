@@ -35,6 +35,8 @@ public class WarnAdminCommand implements CommandExecutor {
                             }catch (NumberFormatException exception){
                                 player.sendMessage(MessageManager.PREFIX + "§7Dies ist §ckeine §7gültige ID.");
                             }
+                        }else{
+                            MessageManager.getAdminHelp(player);
                         }
                     }else{
                         MessageManager.getAdminHelp(player);
