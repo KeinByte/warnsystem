@@ -1,7 +1,7 @@
 name: WarnSystem
 version: 1.0
 author: KeinByte
-main: net.minesucht.warn.WarnSystem
+main: eu.bytis.warnsystem.WarnSystem
 
 commands:
   warn:

@@ -1,8 +1,7 @@
-package net.minesucht.warn.commands;
+package eu.bytis.warnsystem.commands;
 
-import net.minesucht.warn.manager.MessageManager;
-import net.minesucht.warn.manager.WarnEntry;
-import org.bukkit.Bukkit;
+import eu.bytis.warnsystem.manager.MessageManager;
+import eu.bytis.warnsystem.manager.WarnEntry;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

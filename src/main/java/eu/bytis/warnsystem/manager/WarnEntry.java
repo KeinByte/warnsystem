@@ -1,6 +1,6 @@
-package net.minesucht.warn.manager;
+package eu.bytis.warnsystem.manager;
 
-import net.minesucht.warn.WarnSystem;
+import eu.bytis.warnsystem.WarnSystem;
 import net.pretronic.databasequery.api.query.result.QueryResultEntry;
 
 import java.util.ArrayList;

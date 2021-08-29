@@ -1,6 +1,7 @@
-package net.minesucht.warn.mysql;
+package eu.bytis.warnsystem.mysql;
 
 import com.zaxxer.hikari.HikariDataSource;
+import eu.bytis.warnsystem.WarnSystem;
 import net.pretronic.databasequery.api.Database;
 import net.pretronic.databasequery.api.collection.DatabaseCollection;
 import net.pretronic.databasequery.api.collection.field.FieldOption;
@@ -28,15 +29,15 @@ public class DatabaseManager {
 
     public void createConnection() {
         Bukkit.getLogger();
-        databaseDriver = DatabaseDriverFactory.create("WarnSystem", new SQLDatabaseDriverConfigBuilder()
+        databaseDriver = DatabaseDriverFactory.create(WarnSystem.getInstance().getConfig().getString("database"), new SQLDatabaseDriverConfigBuilder()
                 .setDialect(Dialect.MYSQL)
-                .setAddress(new InetSocketAddress("localhost", 3306))
+                .setAddress(new InetSocketAddress(WarnSystem.getInstance().getConfig().getString("hostname"), WarnSystem.getInstance().getConfig().getInt("port")))
                 .setDataSourceClassName(HikariDataSource.class.getName())
-                .setUsername("root")
-                .setPassword("xyz")
+                .setUsername(WarnSystem.getInstance().getConfig().getString("username"))
+                .setPassword(WarnSystem.getInstance().getConfig().getString("password"))
                 .build());
         databaseDriver.connect();
-        database = databaseDriver.getDatabase("WarnSystem");
+        database = databaseDriver.getDatabase(WarnSystem.getInstance().getConfig().getString("database"));
 
         createCollection();
     }

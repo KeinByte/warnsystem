@@ -1,0 +1,5 @@
+hostname: localhost
+database: warnsystem
+username: root
+password: supersecretpassword
+port: 3306

@@ -1,4 +1,4 @@
-package net.minesucht.warn.manager;
+package eu.bytis.warnsystem.manager;
 
 import java.util.UUID;
 
@@ -9,11 +9,11 @@ import java.util.UUID;
 
 public class HistoryEntry {
 
-    private int iD;
-    private UUID player;
-    private UUID creator;
-    private String reason;
-    private long timeCreated;
+    private final int iD;
+    private final UUID player;
+    private final UUID creator;
+    private final String reason;
+    private final long timeCreated;
 
     public HistoryEntry(int iD, UUID player, UUID creator, String reason, long timeCreated) {
         this.iD = iD;
@@ -23,7 +23,7 @@ public class HistoryEntry {
         this.timeCreated = timeCreated;
     }
 
-    public int getiD() {
+    public int getId() {
         return iD;
     }
 

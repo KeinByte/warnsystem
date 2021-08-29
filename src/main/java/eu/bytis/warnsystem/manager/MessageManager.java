@@ -1,4 +1,4 @@
-package net.minesucht.warn.manager;
+package eu.bytis.warnsystem.manager;
 
 import org.bukkit.command.CommandSender;
 

@@ -1,8 +1,8 @@
-package net.minesucht.warn.commands;
+package eu.bytis.warnsystem.commands;
 
-import net.minesucht.warn.manager.HistoryEntry;
-import net.minesucht.warn.manager.MessageManager;
-import net.minesucht.warn.manager.WarnEntry;
+import eu.bytis.warnsystem.manager.MessageManager;
+import eu.bytis.warnsystem.manager.WarnEntry;
+import eu.bytis.warnsystem.manager.HistoryEntry;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
@@ -36,13 +36,13 @@ public class WarnLogCommand implements CommandExecutor {
                                     player.sendMessage("§8§m---------------------------------------------§r");
                                     Player creator = Bukkit.getPlayer(historyEntry.getCreator());
                                     if (creator != null) {
-                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getiD() + "\n" +
+                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getId() + "\n" +
                                                 "§7Datum§8: §e" + simpleDateFormat.format(historyEntry.getTimeCreated()) + "\n" +
                                                 "§7Ersteller§8: §e" + creator.getName() + "\n" +
                                                 "§7Grund§8: §e" + historyEntry.getReason());
                                     } else {
                                         OfflinePlayer offlineCreator = Bukkit.getOfflinePlayer(historyEntry.getCreator());
-                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getiD() + "\n" +
+                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getId() + "\n" +
                                                 "§7Datum§8: §e" + simpleDateFormat.format(historyEntry.getTimeCreated()) + "\n" +
                                                 "§7Ersteller§8: §e" + offlineCreator.getName() + "\n" +
                                                 "§7Grund§8: §e" + historyEntry.getReason());
@@ -60,13 +60,13 @@ public class WarnLogCommand implements CommandExecutor {
                                     player.sendMessage("§8§m---------------------------------------------§r");
                                     Player creator = Bukkit.getPlayer(historyEntry.getCreator());
                                     if (creator != null) {
-                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getiD() + "\n" +
+                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getId() + "\n" +
                                                 "§7Datum§8: §e" + simpleDateFormat.format(historyEntry.getTimeCreated()) + "\n" +
                                                 "§7Ersteller§8: §e" + creator.getName() + "\n" +
                                                 "§7Grund§8: §e" + historyEntry.getReason());
                                     } else {
                                         OfflinePlayer offlineCreator = Bukkit.getOfflinePlayer(historyEntry.getCreator());
-                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getiD() + "\n" +
+                                        player.sendMessage("§7Verwarnung §8#§e" + historyEntry.getId() + "\n" +
                                                 "§7Datum§8: §e" + simpleDateFormat.format(historyEntry.getTimeCreated()) + "\n" +
                                                 "§7Ersteller§8: §e" + offlineCreator.getName() + "\n" +
                                                 "§7Grund§8: §e" + historyEntry.getReason());
